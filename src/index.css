@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        --color-primary: 61, 82, 160;
+        --color-secondary: 112, 145, 230;
+        --color-tertiary: 134, 151, 196;
+    }
+}
+
+.app__container{
+    background: rgb(237,232,245);
+    background: radial-gradient(circle, rgba(237,232,245,1) 0%, rgba(173,187,218,1) 87%, rgba(134,151,196,1) 100%);
+
+    height: 100vh;
+}

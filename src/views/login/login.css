@@ -1,0 +1,15 @@
+.login__form{
+    background-color: rgba( 237, 232, 245, .4 )!important;
+
+}
+
+.login__form--inputs-container{
+
+}
+
+.login__form--text{
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+}
