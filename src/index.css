@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
 
 @layer base{
     :root{
@@ -11,8 +11,5 @@
 }
 
 .app__container{
-    background: rgb(237,232,245);
-    background: radial-gradient(circle, rgba(237,232,245,1) 0%, rgba(173,187,218,1) 87%, rgba(134,151,196,1) 100%);
-
     height: 100vh;
 }

@@ -1,0 +1,18 @@
+.header{
+    align-items: center;
+    display: flex;
+}
+
+.header-perfil_nombre{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.header-perfil_correo{
+    background-color: rgb(var(--color-primary));
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    width: 100%;
+}

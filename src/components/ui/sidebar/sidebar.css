@@ -1,0 +1,57 @@
+.sidebar{
+    background-color: rgb(var(--color-primary));
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.sidebar-content{
+    margin: 10px;
+}
+
+.sidebar-title{
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.sidebar-profile{
+    text-align: start;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px!important;
+    margin-bottom: 40px!important;
+}
+
+.sidebar-profileicon{
+    font-size: 2.5rem;
+}
+
+.sidebar-menu{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.sidebar-menu_text{
+    align-items: center;
+    display: flex;
+
+}
+
+.selected{
+    background-color: rgb(var(--color-secondary));
+}
+
+.sidebar-opciones_submenu{
+    margin-left: 20px;
+}
+
+.sidebar-opcion_submenu{
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 100%;
+}
+

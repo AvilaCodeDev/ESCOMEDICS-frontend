@@ -1,0 +1,10 @@
+.citas-card{
+    background-color: #f2f2f2;
+    border-radius: 1rem;
+    padding: 2rem!important;
+}
+
+.citas-card_body{
+    display: flex;
+    justify-content: space-between;
+}

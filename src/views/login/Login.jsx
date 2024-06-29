@@ -13,11 +13,12 @@ export const Login = () => {
 
   const [ errorMail, setErrorMail ] = useState({ isValid: true, mensaje: ""});
   const [ erroPass, setErrorPass ] = useState({ isValid: true, mensaje:""});  
-  const { credentials } = useSelector( (state) => state.login );
+  const { credentials, loginError } = useSelector( (state) => state.login );
   const navigate = useNavigate();
 
   const {
-    setLogin
+    setLogin,
+    setUserData
   } =  useStoreLogin();
 
 
@@ -73,11 +74,26 @@ export const Login = () => {
   }  
 
   useEffect(() => {
-    if( !!credentials?.uid ){
-      navigate(`/pacientes`)
+    const fetchData = async( ) => {
+      if( !!credentials?.uid ){
+        const {uid, id_rol} = credentials;
+        const userData = await setUserData({ uid, id_rol });
+        navigate(`/home`);
+      }
     }
+
+    fetchData();
   }, [credentials])
-  
+
+  useEffect(( () => {
+    if(loginError != null ){
+      setErrorPass({ isValid: false , mensaje: loginError})
+      setErrorMail({ isValid: false , mensaje: ''})
+    }else if(loginError == null ){
+      setErrorPass({ isValid: true , mensaje: ''})
+      setErrorMail({isValid: true, mensaje:''})
+    }
+  }),[loginError])
 
   return (
     <Card 
@@ -119,6 +135,12 @@ export const Login = () => {
                 errorMessage={ erroPass.mensaje }
               />
               <Button className='col-span-3 col-start-2 row-start-5' color='primary' onClick={ enviarDatos }>Iniciar Sesion </Button>
+
+              {/* { 
+                  loginError != null 
+                  ? <span className='col-span-3 row-start-6 col-start-2' >{loginError}</span>
+                  : ''
+              } */}
             </div>
         </CardBody>
     </Card>
